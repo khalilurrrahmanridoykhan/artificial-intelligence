@@ -5,6 +5,7 @@ Pacman agents (in searchAgents.py).
 
 import util
 
+
 class SearchProblem:
     """
     This class outlines the structure of a search problem, but doesn't implement
@@ -32,7 +33,6 @@ def tinyMazeSearch(problem):
     return [s, s, w, s, w, w, s, w]
 
 
-# DFS = depthFirstSearch
 def depthFirstSearch(problem):
     """Search the deepest nodes in the search tree first."""
     from util import Stack
@@ -61,7 +61,6 @@ def depthFirstSearch(problem):
     return []  # If no solution is found
 
 
-# BFS = breadthFirstSearch
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
     from util import Queue
@@ -77,7 +76,7 @@ def breadthFirstSearch(problem):
 
         # Check if the state is the goal
         if problem.isGoalState(current_state):
-            return path  # Return the path to the goal
+            return path
 
         if current_state not in visited:
             visited.add(current_state)
@@ -90,7 +89,6 @@ def breadthFirstSearch(problem):
     return []  # If no solution is found
 
 
-# UCS = uniformCostSearch
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
     from util import PriorityQueue
