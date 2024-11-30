@@ -32,6 +32,7 @@ def tinyMazeSearch(problem):
     return [s, s, w, s, w, w, s, w]
 
 
+# DFS = depthFirstSearch
 def depthFirstSearch(problem):
     """Search the deepest nodes in the search tree first."""
     from util import Stack
@@ -60,6 +61,7 @@ def depthFirstSearch(problem):
     return []  # If no solution is found
 
 
+# BFS = breadthFirstSearch
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
     from util import Queue
@@ -88,6 +90,7 @@ def breadthFirstSearch(problem):
     return []  # If no solution is found
 
 
+# UCS = uniformCostSearch
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
     from util import PriorityQueue
